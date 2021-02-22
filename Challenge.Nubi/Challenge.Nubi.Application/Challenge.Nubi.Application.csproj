@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="MediatR" Version="8.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Challenge.Nubi.Domain\Challenge.Nubi.Domain.csproj" />
+    <ProjectReference Include="..\Challenge.Nubi.Infrastructure\Challenge.Nubi.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
