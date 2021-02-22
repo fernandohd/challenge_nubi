@@ -18,12 +18,20 @@ namespace Challenge.Testing.Services.ApiServices
             service = ServiceBuilder<MercadoLibreOptions>.GetService<MonedasApiService>();
         }
 
-        [TestCase()]
+        [TestCase]
         public void ObtenerMonedasAsyncTest()
         {
             var result = service.ObtenerMonedasAsync().Result;
 
             Assert.IsTrue(result.Any());
+        }
+
+        [TestCase("ARS")]
+        public void ObtenerMonedasAsyncTest(string id)
+        {
+            var result = service.ObtenerMonedaAsync(id).Result;
+
+            Assert.IsNotNull(result);
         }
 
         [TestCase("ARS", "CLP")]
